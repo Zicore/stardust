@@ -1,4 +1,4 @@
-# Stardust Project
+# Stardust - A collection of Tools for Once Human
 
 This project includes two calculators: **Stardust Calculator** and **Silver and Gold Calculator**. These calculators help players to manage resources in the game.
 
