@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 
 const Calculator = () => {
-  const [fuel, setFuel] = useState<number>(0); // Allow fuel to be string to handle input
-  const [stardustOre, setStardustOre] = useState<number>(0);
-  const [stardustSource, setStardustSource] = useState<number>(0);
+  const [fuel, setFuel] = useState<number>(15); // Allow fuel to be string to handle input
+  const [stardustOre, setStardustOre] = useState<number>(50);
+  const [stardustSource, setStardustSource] = useState<number>(50);
 
   const fuelMultiple = 15; // The nearest multiple of Fuel to round down to
 
@@ -59,7 +59,7 @@ const Calculator = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-12 px-4 py-16">
-      <h1 className="text-2xl font-extrabold tracking-tight sm:text-[5rem]">
+      <h1 className="text-xl font-extrabold tracking-tight sm:text-[4rem]">
         Stardust Calculator
       </h1>
       <div className="flex flex-col">

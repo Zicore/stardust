@@ -4,16 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
-    "db:generate": "prisma migrate dev",
-    "db:migrate": "prisma migrate deploy",
-    "db:push": "prisma db push",
-    "db:studio": "prisma studio",
-    "dev": "next dev",
-    "postinstall": "prisma generate",
-    "lint": "next lint",
-    "start": "next start"
-  },
+  "build": "next build",
+  "db:generate": "prisma migrate dev",
+  "db:migrate": "prisma migrate deploy",
+  "db:push": "prisma db push",
+  "db:studio": "prisma studio",
+  "dev": "next dev",
+  "start:dev": "NODE_ENV=development next start",
+  "start:prod": "NODE_ENV=production next start",
+  "postinstall": "prisma generate",
+  "lint": "next lint",
+  "start": "next start",
+  "deploy": "npm run build && touch ./out/.nojekyll && gh-pages -d out -t true"
+}
+,
   "dependencies": {
     "@auth/prisma-adapter": "^1.6.0",
     "@prisma/client": "^5.14.0",
@@ -40,6 +44,7 @@
     "@typescript-eslint/parser": "^8.1.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
